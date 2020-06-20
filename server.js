@@ -22,4 +22,4 @@ requireDir('./src/models') //Registro do model na aplicação
 //Rotas
 app.use('/api', require('./src/routes'));
 
-app.listen(3001);// ouvir a porta 
+app.listen(process.env.PORT || 3000);// ouvir a porta 
