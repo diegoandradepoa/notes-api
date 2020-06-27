@@ -20,6 +20,6 @@ mongoose.connect(
 requireDir('./src/models') //Registro do model na aplicação
 
 //Rotas
-app.use('/api', require('./src/routes'));
+app.use('/', require('./src/routes'));
 
 app.listen(process.env.PORT || 3000);// ouvir a porta 
