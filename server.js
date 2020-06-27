@@ -5,7 +5,7 @@ const requireDir = require('require-dir');// Importando o require dir
 
 // Iniciando o App
 const app = express(); //criar uma variavel para executar a função do express()
-app.use(cors({ origin: 'https://notes-react-dac.herokuapp.com' })); // É possível passar os domínios que você quiser dentro dos parênteses ((www.teste.com.br))
+app.use(cors()); // É possível passar os domínios que você quiser dentro dos parênteses ((www.teste.com.br))
 app.use(express.json()); //Permitir envio de dados em formato de JSON.
 
 // Iniciando o DB
