@@ -5,11 +5,11 @@ const NoteController = require('./controllers/NoteController');//importar o cont
 
 // Rotas
 //variavel.metodo(rota,controlador.metodo)
-routes.get('/note', NoteController.index);
-routes.get('/note/:id', NoteController.show);
-routes.post('/note', NoteController.criacao);
-routes.put('/note/:id', NoteController.update);
-routes.delete('/note/:id', NoteController.delete)
+routes.get('/', NoteController.index);
+routes.get('/:id', NoteController.show);
+routes.post('/', NoteController.criacao);
+routes.put('/:id', NoteController.update);
+routes.delete('/:id', NoteController.delete)
 
 
 module.exports = routes; // exportar a rota

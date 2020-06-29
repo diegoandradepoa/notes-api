@@ -10,7 +10,7 @@ app.use(express.json()); //Permitir envio de dados em formato de JSON.
 
 // Iniciando o DB
  //URL de conexao com o MongoDB(se tiver usuario e senha informar)
-mongoose.connect(
+ mongoose.connect(
     process.env.MONGO_URL, 
     { 
         useNewUrlParser: true
@@ -23,3 +23,26 @@ requireDir('./src/models') //Registro do model na aplicação
 app.use('/', require('./src/routes'));
 
 app.listen(process.env.PORT || 3000);// ouvir a porta 
+
+//para uso em produção
+
+/*mongoose.connect(
+    process.env.MONGO_URL, 
+    { 
+        useNewUrlParser: true
+    }
+); 
+*/
+
+
+//app.listen(process.env.PORT || 3000);// ouvir a porta 
+
+
+//////////////////// Uso sem desenvolvimento
+
+
+/*mongoose.connect('mongodb://localhost:27017/notasapi',{ 
+    useNewUrlParser: true
+}
+*/
+//app.listen(3001);// ouvir a porta 
