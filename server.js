@@ -20,7 +20,9 @@ app.use(express.json()); //Permitir envio de dados em formato de JSON.
 requireDir('./src/models') //Registro do model na aplicação
 
 //Rotas
-app.use('/', require('./src/routes'));
+app.use(require('./src/routes'));
+//uso de desenvolvimento
+//app.use('/', require('./src/routes'));
 
 app.listen(process.env.PORT || 3000);// ouvir a porta 
 
